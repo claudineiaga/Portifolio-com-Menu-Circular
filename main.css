@@ -1,0 +1,275 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.va_menu_icon {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    z-index: 99;
+}
+
+.va_menu_icon:focus {
+    outline: none;
+}
+
+.va_menu_icon span {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    height: 7px;
+    background: #fff;
+}
+
+.va_menu_icon span:before, 
+.va_menu_icon span:after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background-color: #fff;
+    content: "";
+}
+
+.va_menu_icon span:before {
+    top: -14px;
+}
+
+.va_menu_icon span:after {
+    bottom: -14px;
+}
+
+.va_menu_icon-X span {
+    transition: background 0s 0.3s;
+}
+
+.va_menu_icon-X span:before, 
+.va_menu_icon-X span:after {
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+}
+
+.va_menu_icon-X span:before {
+    transition-property: top, transform;
+}
+
+.va_menu_icon-X span:after {
+    transition-property: bottom, transform;
+}
+
+.va_menu_icon-X.is-active span {
+    background: none;
+}
+
+.va_menu_icon-X.is-active span:before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.va_menu_icon-X.is-active span:after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+.va_menu_icon-X.is-active span:before, 
+.va_menu_icon-X.is-active span:after {
+    transition-delay: 0s, 0.3s;
+}
+nav {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    z-index: 4;
+}
+.bubble_all {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #c26a06;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    z-index: 4;
+}
+#one, #two, #three, #four {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    z-index: 3;
+    box-shadow: 0 0 20px -5px #111;
+    text-align: center;
+}
+.bubble svg:hover ~ h3 {
+     opacity: 1;
+}
+.bubble h3 {
+    opacity: 0;
+    transition: all 400ms;
+    -webkit-transition: all 600ms;
+}
+#one {
+    background-color: #e7b044;
+}
+#one svg {
+    width: 40px;
+    margin-top: 12px;
+}
+#one>h3 {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #f8f6f6;
+    top: 50%;
+    left: 75px;
+    transform: translateY(-50%);
+}
+#two {
+    background-color: #f3cc61;
+}
+#two svg {
+    width: 40px;
+    margin-top: 12px;
+}
+#two>h3 {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #fcfafa;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#three {
+    background-color: #efc634;
+}
+#three svg {
+    width: 40px;
+    margin-top: 14px;
+}
+#three>h3 {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #f5f3f3;
+    top: 50%;
+    left: -75px;
+    transform: translateY(-50%);
+}
+#four {
+    background-color: #f49231;
+}
+#four svg {
+    width: 40px;
+    margin-top: 12px;
+}
+#four>h3 {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #f7f5f5;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+section {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+.start {
+    top: 0;
+    left: 0;
+    background-color: #021e48;
+    text-align: center;
+}
+figcaption{
+    color: #f6f3f3;
+    font-size: 50px;
+}
+.first {
+    display: flexbox;
+    left: 100vw;
+    top: 0;
+    background-color: #0e2241;
+}
+.content.pag1.img{
+    width: 40%;
+    height: 40px;
+}
+.second {
+    left: 0;
+    top: 100vh;
+    background-color: #0e2241;
+}
+.third {
+    left: -100vw;
+    top: 0;
+    background-color: #0e2241;
+}
+.fourth {
+    left: 0;
+    top: -100vh;
+    background-color: #0e2241;
+}
+section:first-child.content {
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+}
+.content {
+    width: 70%;
+    height: 100vh;
+    opacity: 1;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    color: #f9f7f7;
+    margin-top: 200px;
+}
+.content p {
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #f7f3f3;
+    margin: 50px 10px;
+}
